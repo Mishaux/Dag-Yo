@@ -11,4 +11,6 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
+//= require cytoscape.min
 //= require_tree .

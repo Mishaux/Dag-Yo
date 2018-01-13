@@ -1,4 +1,13 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<h1>DAG, Yo.</h1>
+
+<% if Vertex.validate_hop_counts %>
+	<h4 style='color: #009900;'>Hop counts from both algorithms agree on all verticies</h4>
+<% else %>
+	<h4 style='color: #990000;'>Algorithms disagree on hop counts. Bummer.</h4>
+<% end %>
+
+Feel free to drag these around if counts seem fishy.
+<br><br>
+<%= button_to "RANDOMIZE (go ahead, it'll be fun!)", '/scramble', method: :put %>
+
+<div id='cy' style="width: 1200px;height:800px;"></div>
