@@ -7,7 +7,7 @@ Since it is part of an application for a web developer job, I made it a web app 
 
 The primary approach simply takes a node and uses recursion to explore all possible descendant branches, returning the length of the longest leg.
 
-That code is here:
+That code is here: https://github.com/Mishaux/Dag-Yo/blob/master/app/models/vertex.rb#L7
 
 I was not meticulous about architectural patterns, wizard level ruby syntax, unit tests, etc. since those weren't really the point. I did keep things mostly tidy.
 
@@ -22,7 +22,7 @@ I was not meticulous about architectural patterns, wizard level ruby syntax, uni
 
 # The more interesting optimizations
 
-* I wondered if a bottom up algorithm might be a faster (or less memory intensive) traversal given very long graphs with few terminal nodes. (Like a questionnaire?) Either way, I built out a bottom up approach for validating my recursive approach. It starts with terminal nodes and climbs up, marking the hop count so far on each node as it passes it, until it reaches apex nodes. That code is here:
+* I wondered if a bottom up algorithm might be a faster (or less memory intensive) traversal given very long graphs with few terminal nodes. (Like a questionnaire?) Either way, I built out a bottom up approach for validating my recursive approach. It starts with terminal nodes and climbs up, marking the hop count so far on each node as it passes it, until it reaches apex nodes. That code is here: https://github.com/Mishaux/Dag-Yo/blob/master/app/models/vertex.rb#L20
 
 * Since we are storing hop counts on the nodes, we could get even smarter about recalculating after a graph edit.
   * When adding a node above an apex node, we only need to increment the hop count for the new node.
