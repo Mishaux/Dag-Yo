@@ -4,7 +4,7 @@ class Vertex < ApplicationRecord
   has_many :next_vertices, through: :outgoing_edges, source: 'to'
   has_many :previous_vertices, through: :incoming_edges, source: 'from'
 
-  # This the meat of the excercize.
+  # This the meat of the exercise.
   def find_max_path_length_recursively
     if self.outgoing_edges.exists?
       available_path_lengths = self.next_vertices.map do |vertex|
