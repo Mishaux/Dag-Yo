@@ -1,5 +1,5 @@
 # README
-See this app in action http://dag-yo.industriumvita.com/
+See this app in action! http://dag-yo.industriumvita.com/
 
 This little app uses two algorithms to solve the longest possible path from any given node to the furthest terminal node in a DAG.
 
